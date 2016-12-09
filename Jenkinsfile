@@ -1,7 +1,9 @@
 
 def runcode() {
-    stage "Run test."
-    sh "./src/aisatsu.sh"
+    node {
+       stage "Run test."
+       sh "./src/aisatsu.sh"
+    }
 }
 
 node() {
