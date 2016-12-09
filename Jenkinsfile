@@ -1,5 +1,5 @@
 
-def run() {
+def runcode() {
     stage "Run test."
     sh "./src/aisatsu.sh"
 }
@@ -10,7 +10,7 @@ node() {
 }
 
 
-run()
+runcode()
 
 
 
