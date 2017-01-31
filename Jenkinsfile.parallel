@@ -1,0 +1,33 @@
+
+def blockA() {
+    node {
+        stage "BlockA"
+        sh "echo 'Hello from BLOCK A!'"
+     }
+}
+
+def blockB() {
+    node {
+        stage "BlockB"
+        sh "ls"
+        sh "echo 'Hello from BLOCK B!'"
+     }
+}
+
+def blockC() {
+    node {
+        stage "BlockC"
+        sh "echo 'And here we are in BLOCK C!'"
+     }
+}
+
+node() {
+    stage "Checkout"
+    checkout scm
+}
+
+
+parallel blockA blockB blockC
+
+
+
