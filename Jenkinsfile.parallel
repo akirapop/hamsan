@@ -3,14 +3,12 @@ def runs = [:]
 
 runs[0]= {
     node {
-        stage "BlockA"
         sh "echo 'Hello from BLOCK A!'"
      }
 }
 
 runs[1]= {
     node {
-        stage "BlockB"
         sh "ls"
         sh "echo 'Hello from BLOCK B!'"
      }
@@ -18,7 +16,6 @@ runs[1]= {
 
 runs[2]= {
     node {
-        stage "BlockC"
         sh "echo 'And here we are in BLOCK C!'"
      }
 }
